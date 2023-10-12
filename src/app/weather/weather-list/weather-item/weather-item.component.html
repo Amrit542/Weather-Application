@@ -1,0 +1,17 @@
+<ng-container #detailComp></ng-container>
+<div class="single-item" [ngStyle]="getBackgroundColor">
+    <div class="a col1">
+        <h3>{{weatherItem.location.name}}</h3>
+        <p>{{weatherItem.current.condition.text}}</p>
+    </div>
+
+    <div class="a col3">
+        <h3 class="temperature">{{weatherItem.current.temp_c}}°C</h3>
+        <p>Lat: {{weatherItem.location.lat}} Lon:{{weatherItem.location.lon}}</p>
+    </div>
+    <div class="actions">
+        <button (click)="detail_comp_open()">More Details</button>
+        <button (click)="close()">Delete</button>
+    </div>
+
+</div>

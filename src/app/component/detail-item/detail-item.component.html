@@ -1,0 +1,87 @@
+<div class="alert-box">
+    <div class="topDetails" >
+        <button class="close" (click)="onClose()">&times;</button>
+        <div class="box" >
+            <div>
+                <h1>{{cityData.location.name}}</h1>
+                <h3>{{cityData.location.region}}</h3>
+            </div>
+            <div style="background-image: url({{cityData.current.condition.icon}}); background-repeat: no-repeat; width: 70px; height: 70px;"></div>
+            <h3 class="temp" >{{cityData.current.temp_c}}°C</h3>
+        </div>
+        <div class="box">
+            <h4>Country</h4>
+            <p>{{cityData.location.country}}</p>
+    
+        </div>
+        <div class="box">
+            <h4>Condition</h4>
+            <p>{{cityData.current.condition.text}}</p>
+        </div>
+        <div class="box">
+            <h4>Latitude</h4>
+            <p>{{cityData.location.lat}}</p>
+        </div>
+        <div class="box">
+            <h4>Longitude</h4>
+            <p>{{cityData.location.lon}}</p>
+        </div>
+        <div class="box">
+            <h4>Humidity </h4>
+            <p>{{cityData.current.humidity}}</p>
+        </div>
+        <div class="box">
+            <h4>Wind speed</h4>
+            <p>{{cityData.current.wind_mph}} mph</p>
+        </div> 
+        
+    
+    </div>
+    
+    
+</div>
+<!-- <div class="topDetails" >
+    <button class="close" (click)="onClose()">&times;</button>
+    <div class="box" >
+        <div>
+            <h1>{{cityData.location.name}}</h1>
+            <h3>{{cityData.location.region}}</h3>
+        </div>
+        <div style="background-image: url({{cityData.current.condition.icon}}); background-repeat: no-repeat; width: 70px; height: 70px;"></div>
+        <h3 class="temp" >{{cityData.current.temp_c}}°C</h3>
+    </div>
+    <div class="box">
+        <h4>Country</h4>
+        <p>{{cityData.location.country}}</p>
+
+    </div>
+    <div class="box">
+        <h4>Condition</h4>
+        <p>{{cityData.current.condition.text}}</p>
+    </div>
+    <div class="box">
+        <h4>Latitude</h4>
+        <p>{{cityData.location.lat}}</p>
+    </div>
+    <div class="box">
+        <h4>Longitude</h4>
+        <p>{{cityData.location.lon}}</p>
+    </div>
+    <div class="box">
+        <h4>Humidity </h4>
+        <p>{{cityData.current.humidity}}</p>
+    </div>
+    <div class="box">
+        <h4>Wind speed</h4>
+        <p>{{cityData.current.wind_mph}} mph</p>
+    </div> -->
+    
+    <!-- <div class="right">
+        <h3>{{cityData.current.temp_c}}</h3>
+        <h3>{{cityData.current.temp_f}}</h3>
+        <p>{{cityData.current.condition.text}}</p>
+    </div> -->
+<!-- </div> -->
+<div class="backdrop a" (click)="onClose()" [ngStyle]="getBackgroundColor">
+   
+</div>

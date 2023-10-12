@@ -1,0 +1,18 @@
+<app-loading *ngIf="isloading"></app-loading>
+<ng-container #error_container></ng-container>
+<section class="weather-list">
+    <div class="searchbox">
+        <input type="text" name="searchName" placeholder="Please enter city name" 
+       [(ngModel)] = "searchValue"
+       (keyup.enter) = "add()"
+        >
+        <button (click)="add()">ADD</button>
+    </div>
+    <div *ngIf="cities.length" class="container">
+        <app-weather-item *ngFor="let city of cities"  
+        [cityData]="city" (deleteItem)="delete($event)"
+         class="box"></app-weather-item>
+        
+    </div>
+   
+</section>
